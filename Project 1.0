@@ -1,0 +1,29 @@
+def compute():
+    n= int (input())
+    if n% 2 == 1:
+        print("Weird")
+    elif n % 2 == 0 and 2 <= n <= 5:
+        print ("Not Weird")
+    elif n % 2 == 0 and 6 <=n <= 20:
+        print("weird")
+    else:
+        print("Not Weird")
+
+
+def again():
+    # Take input from user
+    calc_again = input('''
+     Do you want to calculate again?
+     Please type Y for YES or N for NO.
+     ''')
+    # If user types Y, run the calculate() function
+    if calc_again.upper() == 'Y':
+     print("Compute Again")
+     compute()
+     again()
+    if calc_again.upper() == 'N':
+      print("See You Later")
+
+
+compute()
+again()
